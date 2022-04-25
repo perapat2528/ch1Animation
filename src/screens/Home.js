@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Platform } from 'react-native'
 import React from 'react'
 
 const Home = () => {
@@ -16,6 +16,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'lightgreen',
+
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'lightgreen',
+      },
+      android: {
+        backgroundColor: 'lightblue',
+      },
+    }),
   },
 })

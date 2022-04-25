@@ -8,7 +8,7 @@ const Stack = createStackNavigator()
 
 const RootStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="AnimateAPI">
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="AnimateAPI" component={AnimateAPI} />
     </Stack.Navigator>
